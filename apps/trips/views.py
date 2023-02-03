@@ -33,3 +33,9 @@ class ExpenseListView(generic.ListView):
  
 class TripListView(generic.ListView):
     model = Trip
+
+class TripDetailView(generic.DetailView):
+    model = Trip
+
+class ExpenseDetailView(generic.DetailView):
+    model = Expense
