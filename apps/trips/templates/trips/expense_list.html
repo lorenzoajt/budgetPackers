@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Expense List</h1>
+
+    {% if expense_list %}
+    <ul>
+
+      {% for expense in expense_list %}
+      <li>
+        <a href="{{ expense.get_absolute_url }}">{{ expense.name }}</a> ({{expense.amount}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no expenses yet.</p>
+    {% endif %}
+{% endblock %}
