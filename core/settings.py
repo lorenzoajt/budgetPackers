@@ -38,6 +38,7 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 PROJECT_APPS = [
+    'apps.trips'
 
 ]
 
