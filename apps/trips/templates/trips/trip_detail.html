@@ -4,7 +4,9 @@
   <h1>{{ trip.name }}</h1>
 
   <p><strong>Duration:</strong> {{ trip.duration }}</p> <!-- author detail link not yet defined -->
-  <p><strong>Daily Budget:</strong> {{ trip.budget_limit }}</p>
+  <p><strong>Daily Goal:</strong> {{ trip.budget_limit }}</p>
+  <p><strong>Total Estimado del viaje</strong> {{ trip.total_budget }}</p>
+  <p><strong>Te has gastado:</strong> {{ trip.current_budget }}</p>
   <p><strong>Creted:</strong> {{ trip.created_at }}</p>  
 
   <div style="margin-left:20px;margin-top:20px">

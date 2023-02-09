@@ -2,6 +2,10 @@ from django.shortcuts import render
 from .models import Trip , Expense 
 from django.views import generic
 
+
+from django.http import HttpResponse
+import datetime
+
 # Create your views here.
 def index(request):
     """
@@ -39,3 +43,4 @@ class TripDetailView(generic.DetailView):
 
 class ExpenseDetailView(generic.DetailView):
     model = Expense
+
