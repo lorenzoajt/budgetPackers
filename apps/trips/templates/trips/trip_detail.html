@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>{{ trip.name }}</h1>
+
+  <p><strong>Duration:</strong> {{ trip.duration }}</p> <!-- author detail link not yet defined -->
+  <p><strong>Daily Goal:</strong> {{ trip.budget_limit }}</p>
+  <p><strong>Total Estimado del viaje</strong> {{ trip.total_budget }}</p>
+  <p><strong>Te has gastado:</strong> {{ trip.current_budget }}</p>
+  <p><strong>Creted:</strong> {{ trip.created_at }}</p>  
+
+  <div style="margin-left:20px;margin-top:20px">
+    <h4>Expenses</h4>
+
+    {% for expense in trip.expense_set.all %}
+        <hr>
+        <p>{{ expense.get_type_of_expense_display }}</p>            
+        <p><strong>{{expense.name}}</strong> </p>
+        <p class="text-muted"><strong>${{expense.amount}}</strong> </p>
+        <p class="text-muted">{{expense.created_at}}</p>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+

@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Trips</h1>
+
+    {% if trip_list %}
+    <ul>
+
+      {% for trip in trip_list %}
+      <li>
+        <a href="{{ trip.get_absolute_url }}">{{ trip.name }}</a> 
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no trips yet.</p>
+    {% endif %}
+{% endblock %}

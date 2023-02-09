@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Welcome Traveler</h1>
+
+  <p>Welcome to <em>Budget Packers</em>, the best way to track your expenses while traveling</p>
+
+<h2>Your Tracker</h2>
+  
+  <ul>
+    <li><strong>Trips:</strong> {{ num_trips }}</li>
+    <li><strong>Expenses:</strong> {{ num_expenses }}</li>
+    <li><strong>Travel expenses:</strong> {{ num_travel_expenses }}</li>
+    <!-- <li><strong>Authors:</strong> {{ num_authors }}</li> -->
+  </ul>
+
+{% endblock %}
